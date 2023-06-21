@@ -10,10 +10,11 @@ def get_input():
     missing_file = False
     for i in ["input.txt", "departments.txt", "class values.xlsx"]:
         if not exists(i):
-            print(f"no file named {i} found")
+            print(f"error: no file named {i} found")
             missing_file = True
     if missing_file:
-        print("program terminated")
+        print("program terminated, no changes have been made")
+        input("press enter to exit")
         exit()
 
     # get and interpret input.txt
@@ -137,12 +138,13 @@ def fill_sheet():
     for _ in range(12):
         totals.append([0, 0, 0, 0])
 
-    # interpreting and storing the of departments.txt
+    # interpreting and storing the contents of departments.txt
     content = open("departments.txt", "r").read()
     mp = eval(content)
     for i in mp:
         if not type(i) is str or len(i) != 3 or not i.isalpha() or not type(mp[i]) is int or mp[i] > 8 or mp[i] < 0:
-            print("contents of departments.txt not in the correct format, program terminated")
+            print("contents of departments.txt not in the correct format, program terminated, no changes have been made")
+            input("press enter to exit")
             exit()
 
     # loading and storing class values.xlsx
@@ -154,7 +156,6 @@ def fill_sheet():
     while not val_sheet["A" + str(i)].value is None:
         class_list.append(val_sheet["A" + str(i)].value)
         i += 1
-
     # putting classes in their cells
     for i in strings_lists:
         # determining the horizontal location
@@ -212,4 +213,4 @@ lunch_space = 2
 rows = initialize_sheet()
 fill_sheet()
 schedule.save("output.xlsx")
-input("press any keys to exit")
+input("program has run successfully, press enter to exit")

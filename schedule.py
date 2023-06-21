@@ -210,16 +210,3 @@ lunch_space = 2
 rows = initialize_sheet()
 fill_sheet()
 schedule.save("output.xlsx")
-
-# to do:
-# convert to exe
-
-# out of curiosity, how often will you have to use this program?
-# how many people will be in the room if you are to project it or something
-# honorarium money given? taxes?
-# do some testing
-# ask for sps secure password to speed up folder upload process
-# minesweeper AI what's good about my algo. - hard bcs. it's doin; it itself, diff. from a logical approach (the approach humans use, but computers think differently)
-# it's kinda weird to go back. I talked about it iterates through all possible arrangements of bombs, it's diff. from how humans think, how human brains work.
-# take a photo with him
-# tell him to look for me for future programs

@@ -21,11 +21,13 @@ def get_input():
     txt = file.read()
     strings_lists = txt.split("\n")
     del strings_lists[0]
+    new_list = []
     for i in range(len(strings_lists)):
         l = strings_lists[i].split(",")
         l = [j.strip('"') for j in l]
-        strings_lists[i] = l
-    return strings_lists
+        if len(l) == 4:
+            new_list.append(l)
+    return new_list
 
 
 def get_xl_col(n):
@@ -210,3 +212,4 @@ lunch_space = 2
 rows = initialize_sheet()
 fill_sheet()
 schedule.save("output.xlsx")
+input("press any keys to exit")

@@ -3,7 +3,7 @@ developed by Tom Zhang
 
 Purpose:
 The purpose of this program is to help school staff better visualize their class schedule.
-The program will output an excel file.
+The program will output an excel file (output.xlsx).
 See the sample output file in the sample files folder
 Classes in red are full year classes.
 Classes in purple are grouped classes.
@@ -11,14 +11,19 @@ Classes in purple are grouped classes.
 In package:
 The package should include class values.xlsx, departments.txt, input.txt, sample files folder, schedule.exe, and schedule.py (python source code).
 Other files are neccessary dependencies and are not to be deleted.
-See schedule1 repository for one file executable
 
 Requirements:
 The program is compatible with Windows systems.
 The user must have a piece of software to open .xlsx files (most likely Microsoft Excel)
 There have to be 3 files in the same directory as the executable file for the program to work: input.txt, departments.txt, and class values.xlsx.
 The files have to be named exactly the same as written.
+
+To run:
 To run the program, double click on schedule.exe
+If you see a message saying the software has been blocked, click on "More Details" then on "Run".
+To see the change in output.xlsx, make sure excel is closed before you open it
+You don't have to delete output.xlsx to run the program.
+If an exisiting file exists, it will overwrite the current file.
 
 ********* input.txt *********
 This is the input class lists to the program.
